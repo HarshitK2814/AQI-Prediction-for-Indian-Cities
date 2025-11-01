@@ -1,0 +1,149 @@
+# ============================================================================
+# AQI Prediction Framework - Git Ignore Rules
+# ============================================================================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints/
+
+# Trained Models (Exclude large model files)
+*.pkl
+*.h5
+*.joblib
+*.pt
+*.pth
+*.onnx
+
+# Datasets (Exclude large data files - download separately)
+*.csv
+*.xlsx
+*.xls
+*.json
+*.parquet
+*.feather
+
+# IMPORTANT: Allow specific essential CSV files
+!notebooks/aqi_dataset.csv
+!notebooks/aqi_dataset_cleaned.csv
+!notebooks/aqi_dataset_engineered.csv
+!models/gpu_results.csv
+
+# Visualization Outputs (Too large for git)
+*.png
+*.jpg
+*.jpeg
+*.svg
+*.pdf
+
+# IMPORTANT: Allow essential visualization files
+!models/model_performance_plots.png
+!models/detailed_performance_plots.png
+!models/explainability/*.png
+
+# Temporary Files
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+
+# Virtual Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.conda/
+
+# IDE / Editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.spyproject/
+.ropeproject/
+*.code-workspace
+
+# Project-specific
+catboost_info/
+mlruns/
+wandb/
+logs/
+*.log
+
+# Dashboard / Frontend (excluded from repository)
+dashboard/
+**/app.py
+**/app_old.py
+
+# CatBoost temporary files
+catboost_training.json
+
+# Old/Backup Files
+*_OLD.*
+*_BACKUP.*
+README_OLD.md
+
+# System Files
+*.pyc
+*.pyo
+*.pyd
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+
+# Documentation builds
+docs/_build/
+site/
+
+# ============================================================================
+# Note: Large files (>100MB) should use Git LFS or be downloaded separately
+# Dataset: https://www.kaggle.com/rohanrao/air-quality-data-in-india
+# ============================================================================
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
